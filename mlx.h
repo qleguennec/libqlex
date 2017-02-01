@@ -1,11 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mlx.h                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/17 12:13:33 by qle-guen          #+#    #+#             */
+/*   Updated: 2017/02/01 14:48:29 by qle-guen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 ** mlx.h for MinilibX in 
 ** 
 ** Made by Charlie Root
 ** Login   <ol@staff.42.fr>
 ** 
-** Started on  Mon Jul 31 16:37:50 2000 Charlie Root
-** Last update Tue Oct 01 16:23:28 2014 Olivier Crouzet
+** Forked by Quentin Le Guennec
+** Login   <qle-guen@student.42.fr>
+** 
 */
 
 /*
@@ -138,5 +151,10 @@ int	mlx_hook(void *win_ptr, int x_event, int x_mask,
 int	mlx_do_key_autorepeatoff(void *mlx_ptr);
 int	mlx_do_key_autorepeaton(void *mlx_ptr);
 int	mlx_do_sync(void *mlx_ptr);
+
+/*
+** mouse events
+*/
+void	w3d_move_mouse(int x, int y);
 
 #endif /* MLX_H */
