@@ -1,7 +1,7 @@
 #import <Cocoa/Cocoa.h>
 
 void
-	w3d_move_mouse
+	mlx_mouse_set_pos
 	(int x
 	, int y)
 {
