@@ -23,6 +23,7 @@
 - (void) setKeyRepeat:(int)mode;
 - (void) exposeNotification:(NSNotification *)note;
 - (void) closeNotification:(NSNotification *)note;
+- (NSPoint) getOrigin;
 @end
 
 
@@ -32,10 +33,8 @@
   NSOpenGLContext	*ctx;
   glsl_info_t		glsl;
   int			openglwin;
-
   int			size_x;
   int			size_y;
-
   int			pixel_nb;
   GLuint		pixel_vbuffer;
   GLuint		pixel_texture;
@@ -53,4 +52,5 @@
 - (void) setEvent:(int)event andFunc:(func_t)func andParam:(void *)param;
 - (void) setKeyRepeat:(int)mode;
 - (void) ctxNeedsUpdate;
+- (NSPoint) getOrigin;
 @end

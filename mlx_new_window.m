@@ -332,6 +332,12 @@ int get_mouse_button(NSEventType eventtype)
   //    event_funct[??](event_param[??]);
   [self exposeNotification:note];
 }
+
+- (NSPoint) getOrigin
+{
+  return (_frame.origin);
+}
+
 @end
 
 
@@ -483,6 +489,11 @@ int get_mouse_button(NSEventType eventtype)
 - (NSOpenGLContext *) ctx
 {
   return (ctx);
+}
+
+- (NSPoint) getOrigin
+{
+  return ([win getOrigin]);
 }
 
 
@@ -654,7 +665,7 @@ void *mlx_new_window(mlx_ptr_t *mlx_ptr, int size_x, int size_y, char *title)
 
   NSRect windowRect = NSMakeRect(100, 100, size_x, size_y);
   str = [NSString stringWithCString:title encoding:NSASCIIStringEncoding];
-  newwin->winid = [[MlxWin alloc] initWithRect:windowRect andTitle:str pfaAttrs:pfa_attrs];
+  newwin->winid = [[MlxWin new] initWithRect:windowRect andTitle:str pfaAttrs:pfa_attrs];
   if (newwin->winid)
     if (![(id)(newwin->winid) pixel_management])
       {

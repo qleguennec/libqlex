@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 12:13:33 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/02/01 14:51:30 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/02/02 13:55:11 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,8 +153,14 @@ int	mlx_do_key_autorepeaton(void *mlx_ptr);
 int	mlx_do_sync(void *mlx_ptr);
 
 /*
-** mouse events
+** mouse
 */
+void	mlx_mouse_hidden(int hidden);
 void	mlx_mouse_set_pos(int x, int y);
+
+/*
+** window
+*/
+void	mlx_window_get_origin(void *win, int *x, int *y);
 
 #endif /* MLX_H */
